@@ -1,11 +1,13 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
 import Btn from './composant/comps';
+import TxtBox from './composant/champ';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Btn label='hi'/>
+      <TxtBox/>
+      <Btn label='help'/>
     </View>
   );
 }
