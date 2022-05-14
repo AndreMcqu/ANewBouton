@@ -1,27 +1,45 @@
+import { StyleSheet, Text, View, TouchableOpacity, SafeAreaView, TextInput } from 'react-native';
 
-import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
-import React from "react";
 const Btn = (props) => {
+    const [text, onChangeText] = React.useState("Name Please");
     return (
-        <TouchableOpacity style={styles.bouton}>
-            <Text style={styles.labeltxt}>{props.label}</Text>
-        </TouchableOpacity>
+        <View>
+            <View>
+                <SafeAreaView>
+                    <TextInput
+                        style={styles.input}
+                        onChangeText={onChangeText}
+                        value={text} />
+                </SafeAreaView>
+            </View>
+            <View>
+                <TouchableOpacity style={styles.bouton}>
+                    <Text style={styles.labeltxt}>No</Text>
+                </TouchableOpacity>
+            </View>
+        </View>
     );
 }
 
-const styles = StyleSheet.create({  
-  bouton: {
-    backgroundColor: 'red',
-    alignItems: 'center',
-    justifyContent: 'center',
-    width: '60%',
-    height: 80,
+const styles = StyleSheet.create({
+    bouton: {
+        backgroundColor: 'red',
+        alignItems: 'center',
+        justifyContent: 'center',
+        width: '60%',
+        height: 80,
 
-},
-labeltxt: {
-    color: 'black',
-    justifyContent: 'center'
-}
+    },
+    labeltxt: {
+        color: 'black',
+        justifyContent: 'center'
+    },
+    input: {
+        height: 40,
+        margin: 12,
+        borderWidth: 1,
+        padding: 10,
+    },
 });
 
 

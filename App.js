@@ -6,8 +6,7 @@ import TxtBox from './composant/champ';
 export default function App() {
   return (
     <View style={styles.container}>
-      <TxtBox/>
-      <Btn label='help'/>
+      <TxtBox label='Sub Here'/>
     </View>
   );
 }
